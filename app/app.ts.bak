@@ -1,0 +1,145 @@
+//can't upgrade to Typescript yet because I'm extending a class on the fly. Would have to modify Angular source
+
+declare var angular: ng.IAngularStatic;
+
+module app {
+    "use strict";
+
+    export var angularApp: ng.IModule =
+        angular.module("blogApp", [
+            // Angular modules 
+            "ngRoute",
+            "ngSanitize",
+            "ngMockE2E",
+
+            // Custom modules 
+            "errors-on-toast"
+
+            // 3rd Party Modules
+        ]);
+
+    angularApp.config(routeConfig);
+
+    routeConfig.$inject = ["$routeProvider", "$compileProvider"];
+
+    function routeConfig($routeProvider: ng.route.IRouteProvider, 
+    $compileProvider: ng.ICompileProvider): void {
+        $routeProvider
+            .when("/Disclaimer",
+            {
+                templateUrl: "app/blogApp/templates/disclaimer.html"
+            })
+            .when("/Feedback",
+            {
+                templateUrl: "app/blogApp/templates/feedback.html"
+            })
+            .when("/AboutMe",
+            {
+                templateUrl: "app/blogApp/templates/aboutMe.html"
+            })
+            .when("/",
+            {
+                templateUrl: "app/blogApp/templates/home.html"
+            })
+            .otherwise({ redirectTo: "/" });
+            
+        //improve performance
+        $compileProvider.debugInfoEnabled(false);
+    }
+}
+
+angular.module('blogApp', []).controller('BaHomeController', app.blogApp.BaHomeController);
+
+
+// (function() {
+//     "use strict";
+//     angular.module("blogApp", []).config([
+//         "$routeProvider", "$compileProvider",
+//         function($routeProvider, $compileProvider) {
+//             $routeProvider.when("/Disclaimer",
+//                 {
+//                     title: "Disclaimer",
+//                     tagLine: "Disclaimer",
+//                     templateUrl: "app/blogApp/templates/disclaimer.html"
+//                 });
+//             $routeProvider.when("/Feedback",
+//                 {
+//                     title: "Feedback",
+//                     tagLine: "Feedback",
+//                     templateUrl: "app/blogApp/templates/feedback.html"
+//                 });
+//             $routeProvider.when("/AboutMe",
+//                 {
+//                     title: "About Me",
+//                     tagLine: "About Me",
+//                     templateUrl: "app/blogApp/templates/aboutMe.html"
+//                 });
+//             $routeProvider.when("/",
+//                 {
+//                     title: "Home",
+//                     templateUrl: "app/blogApp/templates/home.html"
+//                 });
+//             $routeProvider.otherwise({ redirectTo: "/" });
+//             
+//             //improve perfromance
+//             $compileProvider.debugInfoEnabled(false);
+// 
+//             //$locationProvider.html5Mode(true); //in terms of IE, only works with IE11+
+// 
+//             //TODO: fix
+//             //config.errorToastTheseURLs = ["localhost"];
+//         }
+//     ]);
+// })();
+
+// (function () {
+//     "use strict";
+// 
+//     angular.module("blogApp", [
+//         // Angular modules 
+//         "ngRoute",
+//         "ngSanitize",
+//         "ngMockE2E",
+// 
+//         // Custom modules 
+//         "errors-on-toast"
+// 
+//         // 3rd Party Modules
+//     ]).config([
+//         "$routeProvider", "$compileProvider",
+//         function ($routeProvider, $compileProvider) {
+//             $routeProvider.when("/Disclaimer",
+//             {
+//                 title: "Disclaimer",
+//                 tagLine: "Disclaimer",
+//                 templateUrl: "app/blogApp/templates/disclaimer.html"
+//             });
+//             $routeProvider.when("/Feedback",
+//             {
+//                 title: "Feedback",
+//                 tagLine: "Feedback",
+//                 templateUrl: "app/blogApp/templates/feedback.html"
+//             });
+//             $routeProvider.when("/AboutMe",
+//             {
+//                 title: "About Me",
+//                 tagLine: "About Me",
+//                 templateUrl: "app/blogApp/templates/aboutMe.html"
+//             });
+//             $routeProvider.when("/",
+//             {
+//                 title: "Home",
+//                 templateUrl: "app/blogApp/templates/home.html"
+//             });
+//             $routeProvider.otherwise({ redirectTo: "/" });
+//             
+//             //improve perfromance
+//             $compileProvider.debugInfoEnabled(false);
+// 
+//             //$locationProvider.html5Mode(true); //in terms of IE, only works with IE11+
+// 
+//             //TODO: fix
+//             //config.errorToastTheseURLs = ["localhost"];
+//         }
+//     ]);
+// })();

@@ -1,0 +1,41 @@
+{
+  "name": "BlogWeb",
+  "version": "1.0.0",
+  "description": "deploy latest changes to staging",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.0.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jscs": "^3.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-print": "^2.0.1",
+    "gulp-util": "^3.0.6",
+    "js-yaml": "^3.4.3",
+    "jscs": "^2.3.1",
+    "jshint-stylish": "^2.0.1",
+    "typedef": "^1.1.0",
+    "underscore": "^1.7.0",
+    "underscore.string": "^2.4.0",
+    "wiredep": "^3.0.0-beta",
+    "yargs": "^3.27.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hoppe.visualstudio.com/DefaultCollection/Blog%20-%20Dev2/_versioncontrol#path=%24%2FBlog+-+Dev2%2FBlog6&_a=contents"
+  },
+  "author": "",
+  "license": "Unauthorized copying of this file, via any medium is strictly prohibited. Proprietary and confidential. Written by Joseph Hoppe."
+}

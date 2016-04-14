@@ -1,0 +1,14 @@
+﻿<section class="baFeedbackCtrl" ng-controller="BaFeedbackController as vm">
+    <h4>Comments? Questions? Found a bug? Please let me know.</h4>
+    <form id="comment" name="feedback" ng-submit="submitForm()">
+        <div class=" comment">
+            <input type="email" maxlength="250" placeholder="Email address (optional)" ng-model="vm.email" />
+            <textarea maxlength="450" required name="commentText" ng-model="vm.comment" 
+                      placeholder="Type your comment here and click submit"></textarea>
+        </div>
+        <button class="btn" data-ng-disabled="feedback.$invalid" data-ng-click="submitForm">Submit</button> 
+    </form>
+    <div class="well" ng-show="vm.showStatus">
+        {{vm.message}}
+    </div>
+</section>

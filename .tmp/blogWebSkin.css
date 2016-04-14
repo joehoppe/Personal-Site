@@ -1,0 +1,34 @@
+/* Mixin */
+/* Implementation */
+.one {
+  color: #0000CC;
+}
+.two {
+  color: #cccc00;
+}
+.three {
+  color: #b3b300;
+}
+.four {
+  color: #1a1aff;
+}
+.five {
+  color: #6666ff;
+}
+/* global */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+/* navbar */
+.navbar > li > a {
+  margin: 0 14em;
+}
+/* sections */
+.section {
+  min-height: 10em;
+}

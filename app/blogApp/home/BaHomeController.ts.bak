@@ -1,0 +1,55 @@
+"use strict"
+
+// interface IBlogEntryListModel{
+//     $http: any;
+// }
+
+//class BaHomeController implements IBlogEntryListModel{
+module app.blogApp {
+    class BaHomeController {
+        //entries: any[];
+
+        //static $inject = ["$http"];
+
+        //constructor(
+        //    private $http
+        //) {
+        //    this.loadEntries();
+        //}
+
+        //private loadEntries() {
+        //    this.$http.get("api/blogEntries").then(function (response) {
+        //        this.entries = response.data;
+        //    });
+        //}
+    }
+}
+
+// (function () {
+//     "use strict";
+// 
+//     angular
+//         .module("blogApp")
+// // ReSharper disable once FunctionsUsedBeforeDeclared
+//         .controller("BaHomeController", baHomeCtrl);
+// 
+// // ReSharper disable once FunctionsUsedBeforeDeclared
+//     baHomeCtrl.$inject = ["$http"]; //'$sanitize'
+// 
+//     function baHomeCtrl($http) { //$ngSanitize
+//         /* jshint validthis:true */
+//         var vm = this;
+// 
+//         function loadEntries() {
+//             $http.get("api/blogEntries").then(function(response) {
+//                 vm.entries = response.data;
+//             });
+//         }
+// 
+//         function activate() {
+//             loadEntries();
+//         }
+// 
+//         activate();
+//     }
+// })();

@@ -1,0 +1,30 @@
+{
+  "name": "Joseph Hoppe's Blog",
+  "version": "0.0.1",
+  "authors": [
+    "josephhoppe@live.com"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "Unauthorized copying of this file, via any medium is strictly prohibited. Proprietary and confidential. Written by Joseph ...",
+  "homepage": "hoppe.apphb.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "angular-sanitize": "~1.4.4",
+    "bootswatch-dist": "cosmo",
+    "angular-mocks": "~1.4.4"    
+  },
+  "devDependencies": {
+    "gulp:": "~3.9.0"  
+  }
+}

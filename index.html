@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="blogApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title ng-bind="title">Loading...</title>
+
+    <!-- css -->
+    <link href="bower_components/bootswatch-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bower_components/angular-toastr/dist/angular-toastr.min.css" rel="stylesheet" />
+    
+    <!-- bower:css -->
+    <!-- endbower -->
+    
+    <link href=".tmp/blogwebSkin.css" rel="stylesheet" />
+    
+    <!-- only scripts that need to be put in head -->
+    <script src="app/analytics/ga.js"></script>
+</head>
+<body ng-cloak>
+    <base href="/">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/#/">{{author}}</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#Disclaimer">Disclaimer</a>
+                </li>
+                <!--<li>
+                    <a href="#Feedback">Feedback</a>
+                </li>-->
+            </ul>
+        </nav>
+        <h1 class="page-header">
+            {{author}} <small>Some lean stuff I've been working on.</small>
+        </h1>
+        <h3 ng-bind="tagLine"></h3>
+
+        <div class="container bwView section">
+            <div class="row">
+                <div class="col-md-8">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="panel-footer">
+            {{author}} &copy; {{year}}.
+            <!--&mdash; <script>document.write(new Date().getFullYear())</script>-->
+            All rights reserved.&nbsp;&nbsp;
+
+            <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+            <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/josephhoppe" data-format="hover" data-related="false">
+            </script>
+        </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+
+    <!-- jQuery should come before angular because angular contains a mini version of jQuery-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script>window.angular || document.write('<script src="bower_components/angular/angular.min.js">\x3C/script>')</script>
+    
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+
+    <script src="bower_components/bootswatch-dist/js/bootstrap.min.js"></script>
+
+    <script src="app/mocks.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/constants.js"></script>
+    <script src="app/run.js"></script>
+
+    <!-- modules -->
+    <script src="bower_components/angular-toastr/dist/angular-toastr.min.js"></script>
+
+    <!-- bower:js -->
+    <!-- endbower -->  
+    
+    <script src="app/blogApp/errorsOnToast/errorsOnToast.js"></script>
+    <script src="app/blogApp/errorsOnToast/exceptionHandler.js"></script>
+
+    <!--controllers -->
+    <script src="app/blogApp/home/BaHomeController.js"></script>
+    <script src="app/blogApp/disclaimer/BaDisclaimerController.js"></script>
+    <script src="app/blogApp/feedback/BaFeedbackController.js"></script>
+
+    <!--factories-->
+    <script src="app/blogApp/factories/configFactory.js"></script>
+
+    <!-- directives -->
+    <script src="app/blogApp/latestFeed/baLatestCards.js"></script>
+    
+    <!-- inject:js -->
+    <!-- endinject -->
+</body>
+</html>
